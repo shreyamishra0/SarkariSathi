@@ -1,0 +1,328 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Inter', sans-serif; 
+}
+
+body { 
+    display: flex; 
+    min-height: 100vh; 
+    background: #f4f7fb; 
+}
+
+.sidebar {
+    width: 250px;
+    background: linear-gradient(180deg, #0d1b2a 0%, #1b2838 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1rem;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 { 
+    color: #00b4d8; 
+    font-size: 1.5rem; 
+    margin-bottom: 2rem; 
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.sidebar a i { 
+    width: 20px; 
+    text-align: center; 
+}
+
+.sidebar a:hover, 
+.sidebar a.active { 
+    background: #00b4d8; 
+    color: #0d1b2a;
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0,180,216,0.3);
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.welcome-header {
+    margin-bottom: 2rem;
+}
+
+.welcome-header h1 { 
+    font-size: 2.5rem; 
+    color: #0d1b2a; 
+    margin-bottom: 0.5rem;
+}
+
+.welcome-header p { 
+    color: #555; 
+    font-size: 1.1rem; 
+}
+
+.stats-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 1.5rem; 
+    margin-bottom: 3rem; 
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    color: #0d1b2a;
+    transition: all 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #00b4d8, #0d1b2a);
+}
+
+.stat-card:hover { 
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,180,216,0.2);
+}
+
+.stat-card.alert {
+    background: linear-gradient(135deg, #fff3cd 0%, #fff 100%);
+    border: 2px solid #ffc107;
+}
+
+.stat-card h3 { 
+    font-size: 2.5rem; 
+    margin-bottom: 0.5rem;
+    color: #00b4d8;
+}
+
+.stat-card p { 
+    font-size: 1rem; 
+    color: #333; 
+    margin-bottom: 0.5rem;
+}
+
+.stat-card small {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.mini-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #00b4d8;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-top: 0.75rem;
+    transition: all 0.3s;
+}
+
+.mini-btn:hover {
+    background: #0d1b2a;
+    transform: translateY(-2px);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #0d1b2a;
+    margin: 2rem 0 1.5rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #00b4d8;
+    display: inline-block;
+}
+
+.quick-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.action-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background: white;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #0d1b2a;
+    transition: all 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.action-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0d1b2a;
+}
+
+.action-card span {
+    font-weight: 600;
+    text-align: center;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+    background: #00b4d8;
+    color: #fff;
+    box-shadow: 0 5px 20px rgba(0,180,216,0.3);
+}
+
+.action-card:hover i { 
+    color: #fff; 
+}
+
+.admin-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    background: #fff; 
+    border-radius: 10px; 
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.admin-table th, 
+.admin-table td { 
+    padding: 1rem; 
+    text-align: left; 
+}
+
+.admin-table th { 
+    background: #0d1b2a; 
+    color: #fff;
+    font-weight: 600;
+}
+
+.admin-table tr:nth-child(even) { 
+    background: #f8f9fa; 
+}
+
+.admin-table tr:hover {
+    background: #e9ecef;
+}
+
+.admin-table button { 
+    padding: 0.5rem 1rem; 
+    border: none; 
+    border-radius: 6px; 
+    background: #0d1b2a; 
+    color: #fff; 
+    cursor: pointer; 
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.admin-table button:hover { 
+    background: #00b4d8;
+    transform: translateY(-2px);
+}
+
+.form-card { 
+    background: white; 
+    padding: 2rem; 
+    border-radius: 15px; 
+    margin-bottom: 1.5rem; 
+    color: #0d1b2a;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.badge {
+    background: #dc3545;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    margin-left: 5px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.badge.success {
+    background: #28a745;
+}
+
+.badge.warning {
+    background: #ffc107;
+    color: #333;
+}
+
+.badge.info {
+    background: #17a2b8;
+}
+
+@media (max-width: 900px) {
+    body { 
+        flex-direction: column; 
+    }
+    
+    .sidebar { 
+        width: 100%; 
+        height: auto;
+        flex-direction: row; 
+        overflow-x: auto; 
+        padding: 1rem; 
+        position: relative;
+    }
+    
+    .sidebar h2 { 
+        margin-bottom: 0;
+        font-size: 1.2rem;
+    }
+    
+    .sidebar a { 
+        flex-direction: column;
+        min-width: 80px;
+        font-size: 0.85rem;
+        padding: 0.5rem;
+    }
+    
+    .main-content { 
+        margin-left: 0;
+        padding: 1rem; 
+    }
+    
+    .welcome-header h1 { 
+        font-size: 1.8rem; 
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .quick-actions-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}

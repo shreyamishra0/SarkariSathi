@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SarkariSathi - Citizen Application Process</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        .process-flow {
+            display: grid;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .step {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-title {
+            flex: 1;
+        }
+
+        .step-title h2 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .step-title .role {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .role.citizen {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .role.officer {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .role.system {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+
+        .step-content {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .step-content ul {
+            margin: 15px 0 0 20px;
+        }
+
+        .step-content li {
+            margin-bottom: 8px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .info-box {
+            background: white;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .info-box h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .arrow-down {
+            text-align: center;
+            color: white;
+            font-size: 2em;
+            margin: -15px 0;
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .comparison-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .comparison-card.online {
+            border-top: 5px solid #4caf50;
+        }
+
+        .comparison-card.offline {
+            border-top: 5px solid #ff9800;
+        }
+
+        .comparison-card h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .comparison-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .comparison-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .comparison-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📋 How Citizen Applications Work</h1>
+
+        <div class="process-flow">
+            <!-- Step 1 -->
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <div class="step-title">
+                        <h2>Citizen Prepares at Home</h2>
+                        <span class="role citizen">Online - Citizen</span>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <p><strong>What citizens do:</strong></p>
+                    <ul>
+                        <li>📱 Browse available services on SarkariSathi</li>
+                        <li>📺 Watch video guides and tutorials</li>
+                        <li>📄 Check required documents list</li>
+                        <li>💰 Check fees and processing time</li>
+                        <li>📅 Book queue/appointment for visit</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="arrow-down">↓</div>
+
+            <!-- Step 2 -->
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <div class="step-title">
+                        <h2>Visit Office with Documents</h2>
+                        <span class="role citizen">In-Person - Citizen</span>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <p><strong>Citizen arrives at office:</strong></p>
+                    <ul>
+                        <li>🏢 Go to government office on booked date/time</li>
+                        <li>✅ Check-in at reception with queue number</li>
+                        <li>📋 Bring all required documents (original + copies)</li>
+                        <li>⏰ Wait for your queue number to be called</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="arrow-down">↓</div>
+
+            <!-- Step 3 -->
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <div class="step-title">
+                        <h2>Officer Creates Application</h2>
+                        <span class="role officer">At Counter - Officer</span>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <p><strong>Officer processes:</strong></p>
+                    <ul>
+                        <li>👤 Verify citizen identity and documents</li>
+                        <li>💻 Create application in system</li>
+                        <li>🎫 Generate tracking number (e.g., PAS-2025-00123)</li>
+                        <li>📸 Collect biometric data if needed</li>
+                        <li>💳 Collect payment/fees</li>
+                        <li>🧾 Print receipt with tracking number for citizen</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="arrow-down">↓</div>
+
+            <!-- Step 4 -->
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">4</div>
+                    <div class="step-title">
+                        <h2>Track Application Online</h2>
+                        <span class="role citizen">Online - Citizen</span>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <p><strong>Citizen monitors progress:</strong></p>
+                    <ul>
+                        <li>🔍 Enter tracking number on website</li>
+                        <li>📊 See real-time status updates</li>
+                        <li>🔔 Receive notifications on status changes</li>
+                        <li>💬 Message officer if questions</li>
+                        <li>📅 Book pickup appointment when ready</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="arrow-down">↓</div>
+
+            <!-- Step 5 -->
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">5</div>
+                    <div class="step-title">
+                        <h2>Officer Updates Status</h2>
+                        <span class="role officer">Backend - Officer</span>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <p><strong>Application stages:</strong></p>
+                    <ul>
+                        <li>✅ Submitted → Document Verification</li>
+                        <li>🔄 Biometric Processing</li>
+                        <li>🔍 External Verification (Police, etc.)</li>
+                        <li>🖨️ Printing</li>
+                        <li>✨ Ready for Pickup</li>
+                        <li>🎉 Completed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="arrow-down">↓</div>
+
+            <!-- Step 6 -->
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">6</div>
+                    <div class="step-title">
+                        <h2>Citizen Collects Document</h2>
+                        <span class="role citizen">In-Person - Citizen</span>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <p><strong>Final step:</strong></p>
+                    <ul>
+                        <li>🔔 Receive notification: "Ready for Pickup"</li>
+                        <li>📅 Book pickup queue slot</li>
+                        <li>🏢 Visit office with tracking receipt</li>
+                        <li>✅ Verify identity</li>
+                        <li>📄 Collect document</li>
+                        <li>✍️ Sign acknowledgment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h1 style="margin-top: 50px;">What Citizens Can Do Online vs Offline</h1>
+
+        <div class="comparison">
+            <div class="comparison-card online">
+                <h3>✅ Online Features (SarkariSathi Website)</h3>
+                <ul>
+                    <li>Browse all government services</li>
+                    <li>Watch video guides and tutorials</li>
+                    <li>Check document requirements</li>
+                    <li>Book queue/appointment slots</li>
+                    <li>Track application status in real-time</li>
+                    <li>View queue position live</li>
+                    <li>Message officers directly</li>
+                    <li>File complaints</li>
+                    <li>View notifications</li>
+                    <li>Manage profile</li>
+                </ul>
+            </div>
+
+            <div class="comparison-card offline">
+                <h3>🏢 Must Visit Office For</h3>
+                <ul>
+                    <li>Submit physical documents</li>
+                    <li>Initial application creation</li>
+                    <li>Biometric data collection (fingerprint, photo)</li>
+                    <li>Payment of fees</li>
+                    <li>Document verification by officer</li>
+                    <li>Signature/authentication</li>
+                    <li>Final document pickup</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>💡 Why This Hybrid Approach?</h3>
+            <p>
+                <strong>Security & Authenticity:</strong> Government documents like passports, citizenship certificates, and licenses require physical verification, biometric data, and secure handling. Officers must verify original documents and identity in person.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Legal Requirements:</strong> Many government processes require face-to-face verification and physical signatures as per Nepal's legal framework.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Digital Convenience:</strong> While submission is offline, the platform saves citizens time by letting them prepare, book slots, and track progress online - eliminating multiple visits and long waits.
+            </p>
+        </div>
+
+        <h1 style="margin-top: 50px;">🎯 Key Benefits for Citizens</h1>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>Learn Before You Go</h3>
+                <p>Watch videos, check requirements, and prepare all documents at home before visiting the office.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <h3>Skip the Queue</h3>
+                <p>Book your appointment slot online and arrive at your scheduled time - no more waiting in long lines.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Track Everything</h3>
+                <p>Real-time status updates on your application progress. Know exactly when your document is ready.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h3>Direct Communication</h3>
+                <p>Message officers directly if you have questions. No need to call or visit for simple queries.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔔</div>
+                <h3>Get Notified</h3>
+                <p>Receive notifications at every stage. Know when it's time to pick up your document.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Mobile Friendly</h3>
+                <p>Access everything from your phone. Check status, book slots, and communicate on the go.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
