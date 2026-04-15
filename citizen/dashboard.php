@@ -401,7 +401,7 @@ body {
         <i class="fas fa-calendar-check"></i>
         <span>Book Queue</span>
     </a>
-    <a href="<?= BASE_URL ?>/citizen/track-status.php" class="action-card">
+    <a href="<?= BASE_URL ?>/citizen/smart-track-status.php" class="action-card">
         <i class="fas fa-search-location"></i>
         <span>Track Application</span>
     </a>
@@ -480,7 +480,7 @@ body {
                     </td>
                     <td><?= date('M d, Y', strtotime($app['submitted_date'])) ?></td>
                     <td>
-                        <a href="<?= BASE_URL ?>/citizen/track-status.php?tracking=<?= $app['tracking_number'] ?>">
+                        <a href="<?= BASE_URL ?>/citizen/smart-track-status.php?tracking=<?= $app['tracking_number'] ?>">
                             <button style="padding: 0.5rem 1rem; background: #0d1b2a; color: white; border: none; border-radius: 6px; cursor: pointer; transition: all 0.3s;">
                                 View
                             </button>

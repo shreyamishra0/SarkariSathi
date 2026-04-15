@@ -378,7 +378,7 @@ body {
     <a href="<?= BASE_URL ?>/citizen/my-queue.php" class="active">
         <i class="fas fa-users"></i> My Queue
     </a>
-    <a href="<?= BASE_URL ?>/citizen/track-status.php">
+    <a href="<?= BASE_URL ?>/citizen/smart-track-status.php">
         <i class="fas fa-search"></i> Track Status
     </a>
     <a href="<?= BASE_URL ?>/citizen/complaints.php">

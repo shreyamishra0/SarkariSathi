@@ -27,7 +27,7 @@ $unread_count = getUnreadCount($_SESSION['user_id']);
             <ul class="nav-menu">
                 <li><a href="/officer/dashboard.php">Dashboard</a></li>
                 <li><a href="/officer/manage-sections.php">Manage Services</a></li>
-                <li><a href="/officer/queue-management.php">Queue Management</a></li>
+                <li><a href="/officer/improved-queue-management.php">Queue Management</a></li>
                 <li><a href="/officer/applications.php">Applications</a></li>
                 <li>
                     <a href="/officer/messages.php">

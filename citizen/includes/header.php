@@ -29,7 +29,7 @@ $unread_count = getUnreadCount($_SESSION['user_id']);
                 <li><a href="/citizen/sections.php">Services</a></li>
                 <li><a href="/citizen/queue-booking.php">Book Queue</a></li>
                 <li><a href="/citizen/my-queue.php">My Bookings</a></li>
-                <li><a href="/citizen/track-status.php">Track Status</a></li>
+                <li><a href="/citizen/smart-track-status.php">Track Status</a></li>
                 <li>
                     <a href="/citizen/messages.php">
                         Messages 

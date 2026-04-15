@@ -409,13 +409,9 @@ while ($row = $service_query->fetch_assoc()) {
                 <i class="fas fa-plus-circle"></i>
                 <span>Add Service</span>
             </a>
-            <a href="queue-management.php" class="action-card">
+            <a href="improved-queue-management.php" class="action-card">
                 <i class="fas fa-list-ol"></i>
                 <span>Manage Queue</span>
-            </a>
-            <a href="applications.php" class="action-card">
-                <i class="fas fa-tasks"></i>
-                <span>Process Applications</span>
             </a>
             <a href="complaints.php" class="action-card">
                 <i class="fas fa-comment-alt"></i>
@@ -443,7 +439,6 @@ while ($row = $service_query->fetch_assoc()) {
                             <th>Service</th>
                             <th>Status</th>
                             <th>Submitted</th>
-                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -454,7 +449,6 @@ while ($row = $service_query->fetch_assoc()) {
                             <td><?= htmlspecialchars($app['section_name']) ?></td>
                             <td><span class="status-badge status-<?= $app['status'] ?>"><?= ucwords(str_replace('_', ' ', $app['status'])) ?></span></td>
                             <td><?= date('M d, Y', strtotime($app['submitted_date'])) ?></td>
-                            <td><a href="view-application.php?id=<?= $app['id'] ?>" class="btn-view">View</a></td>
                         </tr>
                         <?php endwhile; ?>
                     </tbody>
