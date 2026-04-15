@@ -1,0 +1,177 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #f8f9fa;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            background: #0d1b2a;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            padding: 20px 0;
+        }
+
+        .sidebar-header {
+            padding: 0 20px 20px;
+            border-bottom: 1px solid #1b3a4b;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-header h2 {
+            color: #00b4d8;
+            font-size: 1.5rem;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+        }
+
+        .sidebar-menu li {
+            margin-bottom: 5px;
+        }
+
+        .sidebar-menu a {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .sidebar-menu a:hover {
+            background: #1b3a4b;
+            color: #00b4d8;
+        }
+
+        .sidebar-menu a.active {
+            background: #00b4d8;
+            color: white;
+        }
+
+        .sidebar-menu i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: 250px;
+            padding: 30px;
+        }
+
+        .page-header {
+            margin-bottom: 30px;
+        }
+
+        .page-title {
+            color: #0d1b2a;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .page-subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* Table Styles */
+        .admin-table {
+            width: 100%;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-collapse: collapse;
+        }
+
+        .admin-table th {
+            background: #0d1b2a;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .admin-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .admin-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .admin-table a {
+            color: #00b4d8;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 10px;
+            border: 1px solid #00b4d8;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .admin-table a:hover {
+            background: #00b4d8;
+            color: white;
+            text-decoration: none;
+        }
+
+        .status-badge {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        .status-submitted { background: #fff3cd; color: #856404; }
+        .status-document_verification { background: #d1ecf1; color: #0c5460; }
+        .status-biometric_processing { background: #d4edda; color: #155724; }
+        .status-external_verification { background: #e2e3e5; color: #383d41; }
+        .status-printing { background: #cce7ff; color: #004085; }
+        .status-ready_for_pickup { background: #d4edda; color: #155724; }
+        .status-completed { background: #c3e6cb; color: #155724; }
+        .status-rejected { background: #f8d7da; color: #721c24; }
+
+        .no-applications {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-style: italic;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .no-applications i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        .tracking-number {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #0d1b2a;
+            background: #f8f9fa;
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+        }
